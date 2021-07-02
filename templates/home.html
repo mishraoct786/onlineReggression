@@ -1,10 +1,36 @@
-<form action="/predict" method='post'>
-    experience:<input  name="experience"><br>
-    test_score:<input type="text"  name="test_score" id="">
-    <br><br>
-    interview_score:<input type="text"  name="interview_score" id="">
-    <input type="submit" value="Submit">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  <div class="container">
+  <form action="/predict" value =0 method='post' class="form-group">
+
+  </br>
+  <div class="form-group">
+       <label for="email">experience:</label>
+       <input  type="number"  value =0 name="experience" min="1" max="10">
+       </div>
+    </br>
+       <div class="form-group">
+           <label for="email">test_score:</label>
+           <input type="number"  value =0 name="test_score" min="1" max="10" id="">
+      </div> </br>
+      <div class="form-group">
+    <label for="email">interview_score:</label> 
+    <input type="number" value =0 name="interview_score" min="1" max="10" id="">
+    </div>
+  </br>
+  <input type="submit" value="Submit">
 </br>
 </br>
+<div class="well form-group">
  {{prediction_text}}
+</div>
   </form>
+
+</div></body>
